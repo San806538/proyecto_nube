@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+
+<title>BONG SPEC S.A</title>
+<link rel="stylesheet" th:href="@{/css/inicio.css}"></link>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Dancing+Script:wght@500;600;700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<style>
+	table {
+        
+        width: 25%;
+        float: right; /* Alinea la tabla a la derecha */
+        margin-left: 320px;
+        margin-top:-535px; /* Asegura que esté alineada en la parte superior */
+    }
+th, td {
+        border: 1px solid white;
+        padding: 5px;
+        text-align: left;
+        width: 30%; /* Ajusta el ancho de las celdas de encabezado */
+        
+    }
+thead {
+        color: white;
+        border-color: red;
+        background-color: green; /* Cambia el color de fondo del encabezado a amarillo */
+    }
+	
+</style>
+<body style="background-color: #0F1119;">
+
+	<!-- Navigation -->
+	<div th:include="usuario/template_usuario.html::header"
+		th:if="${sesion==null}"></div>
+
+
+	<div th:include="usuario/template_usuario.html::header-user"
+		th:unless="${sesion==null}"></div>
+	<!-- Page Content -->
+	<div class="container">
+
+
+		<!-- Page Heading/Breadcrumbs -->
+
+<div class="espacio-vertical1"></div>
+		<h2 class="hola" style="font-family: 'Dancing Script', cursive;margin-left: -750px; text-align: center; font-size: 40px;  color: white;">Le Entregamos el Producto a la Puerta de su Casa, Oficina o Taller</h2>
+		<div class="espacio-vertical1"></div>
+<div class="container" style="margin-left: -300px;">
+        <div class="row "> <!-- Cambio aquí -->
+
+        <div class="col-md-8">
+    <form class="form-horizontal" method="post" th:action="@{/envios/save}" enctype="multipart/form-data" th:object="${metodoEnvio}">
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="orden" style="color:white">Orden:</label>
+                    <input type="text" class="form-control" id="orden" name="orden" placeholder="N° de Orden" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="nombre"style="color:white">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required="required">
+                </div>
+                <div class="form-group"style="color:white">
+                    <label for="direccion">Dirección:</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="correo"style="color:white">Correo:</label>
+                    <input type="text" class="form-control" id="correo" name="correo" placeholder="Correo" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="postal"style="color:white">Postal:</label>
+                    <input type="text" class="form-control" id="postal" name="postal" placeholder="Postal" required="required">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label for="proveedor"style="color:white">Empresas de Delivery:</label>
+                    <select th:field="*{proveedor}" class="form-control">
+                        <option value="">SELECCIONE</option>
+                        <option th:value="celeritas">Celeritas</option>
+                        <option th:value="fedex">Fedex</option>
+                        <option th:value="milenvios">Milenvios</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="apellido"style="color:white">Apellido:</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="telefono"style="color:white">Teléfono:</label>
+                    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Teléfono" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="departamento"style="color:white">Departamento:</label>
+                    <input type="text" class="form-control" id="departamento" name="departamento" placeholder="Departamento" required="required">
+                </div>
+                <div class="form-group">
+                    <label for="departamento"style="color:white">Distrito:</label>
+                    <input type="text" class="form-control" id="distrito" name="distrito" placeholder="Distrito" required="required">
+                </div>
+            </div>
+        </div>
+       <div class="espacio-vertical1"></div>
+		<p style="color:white">PRECIOS REFERENCIALES (Consultar vía whatsapp +51 913 503 592)</p>
+		
+		<div class="espacio-vertical1"></div>
+        <div class="row">
+            <div class="col-sm-12">
+                <button type="submit" class="btn btn-success" style="background-color: #008000">Enviar Entrega</button>
+            </div>
+        </div>
+
+   </form>
+  
+        </div>
+    </div>
+</div>
+<div class="container" style="margin-left: -300px;">
+
+
+ 
+</div>
+
+
+	</div>
+
+   <div style="display: flex; justify-content: center;">
+    <table>
+        <thead >
+            <tr>
+                <th>Distrito</th>
+                <th>Monto</th>
+            </tr>
+        </thead >
+        <tbody style="color: white;">
+           <tr>
+          <td>Ate</td>
+          <td>S/. 15,00</td>
+        </tr>
+        <tr>
+          <td>Barranco</td>
+          <td>S/. 15,00</td>
+        </tr>
+        <tr>
+          <td>Breña</td>
+          <td>S/. 18,00</td>
+        </tr>
+        <tr>
+          <td>Carabayllo</td>
+          <td>S/. 30,00</td>
+        </tr>
+        <tr>
+          <td>Cercado de Lima</td>
+          <td>S/. 20,00</td>
+        </tr>
+        <tr>
+          <td>Chorillos</td>
+          <td>S/. 18,00</td>
+        </tr>
+        <tr>
+          <td>Comas</td>
+          <td>S/. 30,00</td>
+        </tr>
+        <tr>
+          <td>Independencia</td>
+          <td>S/. 30,00</td>
+        </tr>
+        <tr>
+          <td>Jesus Maria</td>
+          <td>S/. 18,00</td>
+        </tr>
+        <tr>
+          <td>La molina</td>
+          <td>S/. 10,00</td>
+        </tr>
+        <tr>
+          <td>La Victoria</td>
+          <td>S/. 20,00</td>
+        </tr>
+        <tr>
+          <td>Lince</td>
+          <td>S/. 15,00</td>
+        </tr>
+        <tr>
+          <td>Los Olivos</td>
+          <td>S/. 25,00</td>
+        </tr>
+        <tr>
+          <td>Magfalena del Mar</td>
+          <td>S/. 18,00</td>
+        </tr>
+        
+        </tbody>
+    </table>
+</div>
+<div class="mi-clase">
+    <table>
+        <thead >
+            <tr>
+                <th>Distrito</th>
+                <th>Monto</th>
+            </tr>
+        </thead >
+        <tbody style="color: white;">
+           <tr>
+          <td>Miraflores</td>
+          <td>S/. 20,00</td>
+        </tr>
+        <tr>
+          <td>Pueblo Libre</td>
+          <td>S/. 15,00</td>
+        </tr>
+        <tr>
+          <td>Puente Piedra</td>
+          <td>S/. 35,00</td>
+        </tr>
+        <tr>
+          <td>Rimac</td>
+          <td>S/. 25,00</td>
+        </tr>
+        <tr>
+          <td>San Borja</td>
+          <td>S/. 10,00</td>
+        </tr>
+        <tr>
+          <td>San Isidro</td>
+          <td>S/. 10,00</td>
+        </tr>
+        <tr>
+          <td>San Juan de Miraflores</td>
+          <td>S/. 15,00</td>
+        </tr> 
+        <tr>
+          <td>San Luis</td>
+          <td>S/. 15,00</td>
+        </tr>
+        <tr>
+          <td>San Martin de Porres</td>
+          <td>S/. 25,00</td>
+        </tr>
+        <tr>
+          <td>San Miguel</td>
+          <td>S/. 18,00</td>
+        </tr>
+        <tr>
+          <td>Santa Anita</td>
+          <td>S/. 18,00</td>
+        </tr>
+         <tr>
+          <td>Surco</td>
+          <td>S/. 10,00</td>
+        </tr> 
+        <tr>
+          <td>Surquillo</td>
+          <td>S/. 10,00</td>
+        </tr>
+         <tr>
+          <td>Villa Maria del Triunfo</td>
+          <td>S/. 25,00</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+	<div class="espacio-vertical2"></div>
+<div class="container">
+    <div class="content-above-box">
+        <!-- Aquí va tu contenido que estará arriba de la caja -->
+    </div>
+    <img src="/img/caja.png" width="200" height="180" class="animated-box" alt="...">
+</div>
+<script src="script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const boxes = document.querySelectorAll('.animated-box');
+    boxes.forEach(box => {
+        box.addEventListener('animationend', function() {
+            box.style.top = 'calc(100% - -0px)'; // Ajusta la posición final para que las cajas se queden en el mismo lugar
+            box.style.animation = 'none'; // Detiene la animación después de que las cajas hayan caído
+        });
+    });
+});
+</script>
+
+
+    <script src="script.js"></script>
+	<!-- /.container -->
+	<div class="espacio-vertical1"></div>
+	<script defer src="https://app.embed.im/snow.js"></script >
+	<!-- Footer -->
+	<footer class="py-5 custom-footer" style="background-color: #151621; margin-bottom: -50px;">
+  <div class="container">
+    <div class="row">
+      <!-- Sección 1: Acerca de SNEAKER WEST -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Acerca de SNEAKER WEST</h5>
+        <p style="color: white;">El proyecto en colaboración con la empresa Sneaker West S.A. busca desarrollar una aplicación web para la venta de zapatillas de marcas reconocidas, abordando las dificultades del comercio electrónico actual.</p>
+        <p style="color: white;">Se utilizará Spring Boot para crear una plataforma segura y transparente, desde la exploración de catálogos hasta la gestión de transacciones.</p>
+        <p style="color: white;">Se implementará un sistema de análisis de ventas para obtener información sobre el comportamiento del cliente y mejorar la estrategia de ventas de "Sneaker West"</p>
+       	<p style="color: white;font-size: 14px;">PERÚ (PEN S/.)"</p>
+        <p style="color: white;font-size: 14px;">© SW-TIENDA"</p>
+        <p style="color: white;font-size: 14px;">Sueño Sneaker West</p>
+        
+        
+      </div>
+      <!-- Sección 2: Enlaces adicionales -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Más Información</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" style="color: white;">Políticas privadas</a></li>
+          <li><a href="#" style="color: white;">Términos de servicio</a></li>
+          <li><a href="#" style="color: white;">Envío</a></li>
+          <li><a href="#" style="color: white;">Guía de tallas</a></li>
+          <li><a class="nav-link font-weight-bold" th:href="@{/contactos}">Contacto</a></li>
+          
+         
+        </ul>
+      </div>
+      <!-- Sección 3: Boletín informativo -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Boletín Informativo</h5>
+        <p style="color: white;">Suscríbete para recibir actualizaciones, acceder a ofertas exclusivas y más.</p>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Introduce tu dirección de correo electrónico">
+          </div>
+          <button type="submit" class="btn btn-primary">Suscribir</button>
+           <div class="text-right">
+  <img src="/img/tpagos.png" alt="Descripción de la imagen" style="width:200px; margin-bottom: 10px;">
+</div>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
+</body>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" th:src="@{/js/sweetalert2.js}"></script>
+<script type="text/javascript">
+	$('.carousel').carousel({
+		interval : 2000
+	})
+</script>
+<script type="text/javascript" th:if="${success != null}">
+	Swal.fire('Registro completado!', 'You clicked the button!', 'success')
+</script>
+</body>
+</html>

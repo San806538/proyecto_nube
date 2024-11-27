@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+
+<title>Sneaker West</title>
+
+<link rel="stylesheet" th:href="@{/css/registrar.css}"></link>
+
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap"
+	rel="stylesheet">
+<script type="module"
+	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule
+	src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet'
+	href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap'>
+<link rel="stylesheet" th:href="@{/css/login.css}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"></link>
+    <link rel="stylesheet" type="text/css" href="/css/shoeList.css">
+    <style>
+  /* Estilo para el botón */
+  .login {
+    font-size: 13px; /* Tamaño de la fuente */
+    /* Espacio alrededor del texto */
+   	 /* Altura del botón */
+  }
+</style>
+</head>
+
+<body class="body">
+    <div th:include="usuario/template_usuario.html::header"></div>
+   	
+   	<div class="container">
+        
+    </div>
+   	
+<div style="text-align: center; color: white; padding: 10px; margin-top: 15px;margin-bottom: -150px; font-size: 50px;">
+    ACCESO
+</div>
+<div style="text-align: center; color: white; padding: 10px; margin-top: 150px;margin-bottom: -190px; font-size: 15px;">
+    Por favor, introduzca su correo electrónico y contraseña:
+</div >
+    <form class="ali" th:action="@{/usuario/acceder}" method="post" style="text-align: center;">
+        <div class="screen-1" style="width: 500px; margin: 200px auto 100px;">
+            <img alt="" th:src="@{/imagenes/ca1.png}" width="150px">
+            <p></p>
+            <div class="email">
+                <label for="email">Email</label>
+                <div class="sec-2">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="email" id="email" name="email" placeholder="Username@gmail.com" autocomplete="off" />
+
+                </div>
+            </div>
+            <div class="password">
+                <label for="password">Contraseña</label>
+                <div class="sec-2">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input class="pas" id="password" type="password" name="password" placeholder="············" />
+                </div>
+            </div>
+            <button class="login" type="submit">Iniciar Sesion</button>
+            <a class="nav-link font-weight-bold"
+                    th:href="@{/usuario/registro}">Crear Cuenta Nueva</a>
+         
+        </div>
+        
+        
+    </form>
+   <img alt="" th:src="@{/img/devo.png}" width="110px" style="float: right; margin-right: 1450px; margin-top: -560px;">
+     <p style="color:white;float: right; margin-right: 1440px; margin-top: -450px;font-size: 20px;"> Envío gratis</p>
+     <p style="color:white;float: right; margin-right: 1430px; margin-top: -420px;font-size: 13px;"> En todos los pedidos</p>
+   <img alt="" th:src="@{/img/envio.png}" width="100px" style="float: right; margin-right: 350px; margin-top: -550px;">
+    <p style="color:white;float: right; margin-right: 290px; margin-top: -450px;font-size: 20px;"> Devoluciones: 90 días</p>
+     <p style="color:white;float: right; margin-right: 300px; margin-top: -420px;font-size: 13px;"> desde la fecha de compras</p>
+   <script defer src="https://app.embed.im/snow.js"></script >
+    <footer class="py-5 custom-footer">
+  <div class="container">
+    <div class="row">
+      <!-- Sección 1: Acerca de OG Esports -->
+      <div class="col-md-4">
+        <h5>Acerca de SNEAKER WEST</h5>
+        <p>El proyecto en colaboración con la empresa Sneaker West S.A. busca desarrollar una aplicación web para la venta de zapatillas de marcas reconocidas, abordando las dificultades del comercio electrónico actual.</p>
+        <p>Se utilizará Spring Boot para crear una plataforma segura y transparente, desde la exploración de catálogos hasta la gestión de transacciones.</p>
+        <p>Se implementará un sistema de análisis de ventas para obtener información sobre el comportamiento del cliente y mejorar la estrategia de ventas de "Sneaker West"</p>
+        <p style="color: white;font-size: 14px;">PERÚ (PEN S/.)"</p>
+        <p style="color: white;font-size: 14px;">© SW-TIENDA"</p>
+        <p style="color: white;font-size: 14px;">Sueño Sneaker West</p>
+      </div>
+      <!-- Sección 2: Enlaces adicionales -->
+      <div class="col-md-4">
+        <h5>Más Información</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Políticas privadas</a></li>
+          <li><a href="#">Términos de servicio</a></li>
+          <li><a href="#">Envío</a></li>
+          <li><a href="#">Guía de tallas</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- Sección 3: Boletín informativo -->
+      <div class="col-md-4">
+        <h5>Boletín Informativo</h5>
+        <p>Suscríbete para recibir actualizaciones, acceder a ofertas exclusivas y más.</p>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Introduce tu dirección de correo electrónico">
+          </div>
+          <button type="submit" class="btn btn-primary">Suscribir</button>
+        </form>
+      </div>
+    </div>
+     <div class="text-right">
+      <img src="/img/tpagos.png" alt="Descripción de la imagen" style="width: 280px; margin-bottom: 10px;">
+    </div>
+  </div>
+</footer>
+</body>
+
+</html>

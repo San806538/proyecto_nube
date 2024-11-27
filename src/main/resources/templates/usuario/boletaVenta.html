@@ -1,0 +1,178 @@
+<link rel="stylesheet" th:href="@{/css/boleta.css}">
+
+
+<a class="btn btn-light"
+                        th:href="@{/usuario/compras}"
+                        th:text="' REGRESAR'" ></a>
+                        
+                        
+<body style="background-color: #0F1119;">
+	<div class="container"  >
+		<div class="boleta-pago" >
+
+	<div class="boleta-pago__content" style="border: 2px solid white;">
+
+
+		<div class="logo">
+            <div class="logo-img" >
+                <img class="img-responsive" th:src="@{/img/sneaker.png}"> 
+            </div>
+            <div class="logo-title">
+                <div class="month" style="color: white; font-size: 50px;">SNEAKER WEST</div>
+            </div>
+        </div>
+		
+		<br>
+<!--PARTE INICIAL -->
+
+		<div class="boleta-pago__header " >
+				<div class="line"></div>
+			<div style="color: white; display: flex; align-items: center; margin-left: 224px;">
+    <div class="title" style="margin-right: 110px;font-size: 19px;">BOLETA DE VENTA</div>
+    
+    <div class="box-date--text" style="color: white; border-color: #FFFFFF;">
+        <strong>N°:</strong>
+        <span th:text="${orden.numero}"></span>
+    </div>
+</div>
+
+		
+
+			<div class="rombo">
+				<div class="year" style="color: white;border-color: #FFFFFF;">2024</div>
+
+			</div>
+		</div>
+		
+	<!--PARTE INICIAL -->	
+				<!--DATOS DEL CLIENTE-->	
+			<div class="boleta-pago__content-row">
+
+				<div class="boleta-pago__row" style="border-bottom: 3px solid #229cbb;
+            padding: 0 0 19px;">
+
+					<table cellpadding="0" cellspacing="0">
+
+						<tbody>
+							<tr>
+								<td height="5"></td>
+							</tr>
+							<tr>
+								<td width="313" valign="top">
+									<div class="boleta-pago__col">
+										<div class="sub" style="color: white;">DATOS DE DEL
+											<div class="sub" style="color: white;">CLIENTE</div>
+											<div class="line"></div>
+										</div>
+										
+										<div class="box-date" th:each="usuario:${usuario}">
+											<div class="box-date--text" style="color: white; border-color: #FFFFFF; display: flex; align-items: center;">
+   												 <strong style="margin-right: 10px;">NOMBRES: </strong>
+  											  <span th:text="${usuario.nombre}" style="font-size: 14px;"></span>
+										</div>
+
+											
+											<div class="box-date--text"style="color: white;border-color: #FFFFFF;display: flex; align-items: center;"><strong style="margin-right: 10px;">APELLIDOS:</strong>
+											 <span  th:text=" ${usuario.apellido}"style="font-size: 14px;"></span></div>
+									
+											
+											<div class="box-date--text"style="color: white;border-color: #FFFFFF;display: flex; align-items: center;"><strong style="margin-right: 10px;">CORREO: </strong>
+											<span th:text=" ${usuario.email}"style="font-size: 14px;"></span></div>									
+										
+									</div>
+								</td>
+
+								<td width="13">&nbsp;</td>
+
+								<td width="124" valign="top">
+									<div class="boleta-pago__col">
+										<div class="sub"style="color: white;border-color: #FFFFFF;">DATOS DE LA
+											<div class="sub"style="color: white;border-color: #FFFFFF;">BOLETA</div>
+											<div class="line"></div>
+										</div>
+										<div class="box-date" >
+																			 
+											 
+											<div class="box-date--text"style="color: white;border-color: #FFFFFF;"> <strong>FECHA: </strong>
+											 <span th:text=" ${orden.fecha} "style="font-size: 12px;"></span></div>
+													
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+<!--DATOS DEL CLIENTE-->	
+		
+		<!--DATOS DE LOS PRODUCTOS VENDIDOOOOS-->		
+		<div class="table-boleta">
+			<table>
+				<tr>
+					<td width="100" style="text-transform: uppercase;color: white;"> <strong>PRODUCTO </strong></td>
+					<td width="100" style="text-transform: uppercase;color: white;"> <strong>MEDIDA </strong></td>
+					<td width="100" style="text-transform: uppercase;color: white;"> <strong>COLOR </strong></td>
+					<td width="120" style="text-transform: uppercase;color: white;"><strong> PRECIO </strong></td>
+					<td width="160" style="text-transform: uppercase;color: white;"><strong> CANTIDAD</strong></td>
+					<td style="text-transform: uppercase;color: white;"><strong>TOTAL</strong></td>
+				</tr>
+				
+				
+				<tr class="b-botom" th:each="detalles:${detalles}">
+					<td  th:text="${detalles.nombre}"style="color: white;"></td>
+					<td  th:text="${detalles.medida}"style="color: white;"></td>
+					<td  th:text="${detalles.color}"style="color: white;"></td>
+					
+					<td>
+						<div class="number">S/ <span th:text="${detalles.precio}+.00"style="color: white;"> </span></div>
+					</td>
+					
+					<td th:text="${detalles.cantidad}" style="color: white;"></td>
+					
+					<td  th:text="${detalles.total}+.00"style="color: white;"></td>
+				</tr>
+
+			</table>
+			
+			
+			
+			
+			<div class="boleta-pago__content-row">
+				<div class="boleta-pago__row">
+					<table cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr>
+								<td width="130" valign="top">
+									<div class="boleta-pago__col">
+										<div class="title">
+											<div class="sub" style="color: white;border-color: #FFFFFF; font-size: 18px;">TOTAL A PAGAR:</div>
+											<div class="line"></div>
+										</div>
+										<div class="box-date">
+											
+											<div class="box-date-col-num"style="color: white;border-color: #FFFFFF;">S/ 
+											<span  th:text=" ${orden.total}+.00"style="color: white;border-color: #FFFFFF;font-size: 18px;">  </span></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+	<!--DATOS DE LOS PRODUCTOS VENDIDOOOOS-->	
+	
+
+		</div>
+	<div>
+	
+	<br>
+	<br>
+<div><a href="javascript:window.print()" class="btn2"> IMPRIMIR BOLETA</a></div>
+
+	</div>
+	</div>
+	</div>
+	<script defer src="https://app.embed.im/snow.js"></script >
+</body>	

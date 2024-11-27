@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Compra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .order-summary {
+            margin-top: 20px;
+        }
+
+        .total {
+            font-weight: bold;
+        }
+
+        .continue-button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Confirmación de Compra</h1>
+        <table class="table table-bordered order-summary">
+            <thead class="thead-light">
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio Unitario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Zapatos deportivos</td>
+                    <td>$50.00</td>
+                </tr>
+                <!-- Aquí puedes agregar más filas según los productos comprados -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td class="total">Total</td>
+                    <td class="total">$50.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <a href="#" class="btn btn-success btn-block continue-button">Continuar con el proceso de compra</a>
+    </div>
+</body>
+</html>

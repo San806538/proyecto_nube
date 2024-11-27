@@ -1,0 +1,243 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.shoe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+ 
+
+.espacio-vertical{
+	margin-bottom: 20px;
+}
+.espacio-vertical1{
+	margin-bottom: 40px;
+}
+.espacio-vertical2{
+	margin-bottom: 140px;
+}
+.shoe-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+.shoe-card h2 {
+    margin-top: 0;
+}
+
+.shoe-card p {
+    margin: 5px 0;
+}
+
+
+.animated-box {
+    position: fixed;
+    top: 400px; /* Ajusta la posición vertical de la caja */
+    animation: moveRight 4s !important; /* Definición de la animación */
+    z-index: 0; /* Establece un índice Z bajo para que la caja esté detrás del contenido */
+}
+
+
+@keyframes moveRight {
+    0% { left: 0%; } /* Posición inicial en el borde izquierdo del contenedor */
+    100% { left: 80%; } /* Posición final (fuera del contenedor hacia la derecha) */
+}
+
+.content-above-box {
+    /* Estilos para el contenido que estará arriba de la caja */
+    position: relative;
+    z-index: 1; /* Establece un índice Z más alto para que el contenido esté encima de la caja */
+}
+
+.navbar-7B69EF {
+    background-color: #7B69EF !important;
+}
+
+
+
+.full-width-img {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    max-height: 100%; /* Ajusta la altura según sea necesario */
+}
+.shipping-message {
+    text-align: center; /* Centra el texto horizontalmente */
+    color: white; /* Establece el color del texto */
+    display: block; /* Asegura que el elemento ocupe todo el ancho disponible */
+    margin: 0 auto; /* Centra el elemento horizontalmente */
+    width: max-content; /* Ajusta el ancho del elemento al contenido */
+}
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table th, .table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilo para las filas impares */
+.odd-row {
+    background-color: #000000; /* Color de fondo para filas impares */
+}
+
+/* Estilo para el encabezado de la columna */
+.table th {
+    background-color: #007bff; /* Color de fondo para el encabezado de columna */
+    color: white; /* Color de texto para el encabezado de columna */
+}
+nav.navbar {
+        font-family: 'Arial', sans-serif; /* Cambia 'Arial' por el tipo de letra que desees */
+    }
+     .navbar-nav .nav-link {
+    font-size: 15px; /* Tamaño de letra deseado */
+}
+
+.zoom-effect {
+    transition: transform 0.5s ease-in-out; /* Transición suave durante 0.5 segundos */
+}
+
+.zoom-effect:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% al pasar el ratón por encima */
+}
+.line2 {
+    text-align: center;
+    width: 1500px; /* Ancho del contenedor */
+    border-top: 5px solid #229cbb;
+    border-radius: 10px;
+    margin: 2px auto 12px auto; /* Establecer márgenes izquierdo y derecho a 'auto' */
+}
+
+.line4 {
+    text-align: center;
+    width: 1850px; /* Ancho del contenedor */
+    border-top: 5px solid #229cbb;
+    border-radius: 18px;
+    margin: 12px auto 12px auto; /* Establecer márgenes izquierdo y derecho a 'auto' */
+}
+/* Estilo para la imagen */
+.animated-image {
+  display: inline-block;
+  animation: growAndMove 3s infinite alternate; /* Animación que dura 3 segundos, se repite infinitamente y alterna el movimiento */
+}
+
+/* Definición de la animación */
+@keyframes growAndMove {
+  0% {
+    transform: scale(1); /* Escala inicial de la imagen */
+    margin-top: 0; /* Sin desplazamiento vertical */
+  }
+  50% {
+    transform: scale(1.5); /* Escala intermedia de la imagen */
+    margin-top: 40px; /* Desplazamiento vertical */
+  }
+  100% {
+    transform: scale(1); /* Escala final de la imagen (vuelve a su tamaño original) */
+    margin-top: 0; /* Sin desplazamiento vertical */
+  }
+}
+@keyframes moverTexto {
+    0% {
+        transform: translateX(0); /* Inicio: sin desplazamiento horizontal */
+    }
+    50% {
+        transform: translateX(100px); /* Desplazamiento horizontal hacia la derecha */
+    }
+    100% {
+        transform: translateX(0); /* Vuelta al inicio: sin desplazamiento horizontal */
+    }
+}
+.line3 {
+    text-align: center;
+    width: 1200px; /* Ancho del contenedor */
+    border-top: 5px solid #229cbb;
+    border-radius: 10px;
+    margin: 2px auto 12px auto; /* Establecer márgenes izquierdo y derecho a 'auto' */
+}
+.line5 {
+    text-align: center;
+    width: 1200px; /* Ancho del contenedor */
+    border-top: 5px solid #229cbb;
+    border-radius: 10px;
+    margin: 2px auto 12px auto; /* Establecer márgenes izquierdo y derecho a 'auto' */
+  
+}
+.mi-clase {
+    table {
+       
+        width: 25%;
+        float: left; /* Alinea la tabla a la derecha */
+        margin-left: 1380px;
+        margin-top:-535px; /* Asegura que esté alineada en la parte superior */
+    }
+
+	    th, td {
+	        border: 1px solid white;
+	        padding: 5px;
+	        text-align: left;
+	                width: 30%; /* Ajusta el ancho de las celdas de encabezado */
+	        
+	    }
+	    
+
+    thead {
+        color: white;
+        border-color: red;
+        background-color: green;
+    }
+}
+.animated-box:nth-child(1) {
+    animation: moveRight1 4s linear;
+}
+
+@keyframes moveRight1 {
+    0% { left: -200px; }
+    100% { left: 80%; }
+}
+
+.animated-box:nth-child(2) {
+    animation: moveRight2 4s linear;
+}
+
+@keyframes moveRight2 {
+    0% { left: -200px; }
+    100% { left: 60%; }
+}
+
+.animated-box:nth-child(3) {
+    animation: moveRight3 4s linear;
+}
+
+@keyframes moveRight3 {
+    0% { left: -200px; }
+    100% { left: 40%; }
+}
+
+.animated-box:nth-child(4) {
+    animation: moveRight4 4s linear;
+}
+
+@keyframes moveRight4 {
+    0% { left: -200px; }
+    100% { left: 20%; }
+}
+
+ /* Estilo para la alerta */
+ 
+

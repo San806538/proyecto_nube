@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+
+<title>Sneaker West</title>
+<link rel="stylesheet" th:href="@{/css/inicio.css}"></link>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap"
+	rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Dancing+Script:wght@500;600;700&display=swap"
+	rel="stylesheet">
+	<link rel="stylesheet" th:href="@{/css/style.css}"></link>
+
+<style>
+    body {
+        background-color: #0F1119; 
+         /* Color de fondo deseado */
+    }
+</style>
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<div th:include="administrador/template_admin::header"></div>
+
+	<!-- Page Content -->
+	<div class="container">
+
+
+		<!-- Page Heading/Breadcrumbs -->
+		<h1 class="hola"
+		style="font-family: 'Dancing Script', cursive; font-weight: 700; text-align: center; font-size: 60px; color: white;">Lista de Usuarios
+		</h1>
+
+		<br> <br>
+
+		
+<table class="table" border="3" style="color: #FFFFFF; border: 3px solid #FFFFFF;" >
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+       <th scope="col">Email</th>
+      <th scope="col">Compras</th>
+    </tr>
+  </thead>
+  <tbody border="3">
+   <tr th:each="u:${usuarios}">
+            <td th:text="${u.id}" style="color: white;border-color: #FFFFFF;" ></td>
+            <td th:text="${u.nombre}" style="color: white;border-color: #FFFFFF;"></td>
+            <td th:text="${u.apellido}" style="color: white;border-color: #FFFFFF;"></td>
+            <td th:text="${u.email}" style="color: white;border-color: #FFFFFF;"></td>
+            <td><a th:href="@{/administrador/pedidos/{id} (id=${u.id})}" class="btn btn-info btn-sm">Ver Compras</a></td>
+        </tr>
+  </tbody>
+</table>
+<div class="espacio-vertical"></div>
+<br>
+<br>
+
+	</div>
+	<!-- /.container -->
+
+	<link href="https://fonts.googleapis.com/css?family=Rubik"
+		rel="stylesheet">
+			<!-- Footer -->
+<script defer src="https://app.embed.im/snow.js"></script >
+<footer class="py-5 custom-footer" style="background-color: #151621; margin-bottom: -50px;">
+  <div class="container">
+    <div class="row">
+      <!-- Sección 1: Acerca de SNEAKER WEST -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Acerca de SNEAKER WEST</h5>
+        <p style="color: white;">El proyecto en colaboración con la empresa Sneaker West S.A. busca desarrollar una aplicación web para la venta de zapatillas de marcas reconocidas, abordando las dificultades del comercio electrónico actual.</p>
+        <p style="color: white;">Se utilizará Spring Boot para crear una plataforma segura y transparente, desde la exploración de catálogos hasta la gestión de transacciones.</p>
+        <p style="color: white;">Se implementará un sistema de análisis de ventas para obtener información sobre el comportamiento del cliente y mejorar la estrategia de ventas de "Sneaker West"</p>
+      </div>
+      <!-- Sección 2: Enlaces adicionales -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Más Información</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" style="color: white;">Políticas privadas</a></li>
+          <li><a href="#" style="color: white;">Términos de servicio</a></li>
+          <li><a href="#" style="color: white;">Envío</a></li>
+          <li><a href="#" style="color: white;">Guía de tallas</a></li>
+          <li><a href="#" style="color: white;">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- Sección 3: Boletín informativo -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Boletín Informativo</h5>
+        <p style="color: white;">Suscríbete para recibir actualizaciones, acceder a ofertas exclusivas y más.</p>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Introduce tu dirección de correo electrónico">
+          </div>
+          <button type="submit" class="btn btn-primary">Suscribir</button>
+        </form>
+      </div>
+    </div>
+     <div class="text-right">
+      <img src="/img/tpagos.png" alt="Descripción de la imagen" style="width: 280px; margin-bottom: 10px;">
+    </div>
+  </div>
+</footer>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
