@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+
+<title>Sneaker Westc</title>
+<link rel="stylesheet" th:href="@{/css/inicio.css}"></link>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap"
+	rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Dancing+Script:wght@500;600;700&display=swap"
+	rel="stylesheet">
+	 <link rel="stylesheet" th:href="@{/css/sweetalert2.min.css}"></link>
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<link rel="stylesheet" th:href="@{/css/shoeList.css}">
+
+</head>
+<body style="background-color: #0F1119;">
+<!-- Navigation -->
+	<div th:include="usuario/template_usuario.html::header"
+		th:if="${sesion==null}"></div>
+
+
+	<div th:include="usuario/template_usuario.html::header-user"
+		th:unless="${sesion==null}"></div>
+<div class="espacio-vertical"></div>
+<script defer src="https://app.embed.im/snow.js"></script >
+<h2 class="hola" style="font-family: 'Arial', sans-serif; font-weight: 10; font-size: 45px; color: #FFFFFF; animation: moverTexto 10s linear infinite;">
+    SERVICIO AL CLIENTE
+</h2>
+ <div class="line4"></div>
+	<h2 class="hola" style="font-family: 'Arial', sans-serif;margin-left: 40px; font-weight: 10; font-size: 20px; color: #FFFFFF;">
+    Servicio disponible de Lun - Vie: 9:00 AM a 9:00 PM y Sab: 10:00 AM a 6:00 PM
+	</h2> 
+	<div class="espacio-extra"></div>
+<img src="/img/wsp.png" class="card-img-top" alt="..." style="margin-left: 40px;width: 120px;height: auto;">
+<h2 class="hola" style="font-family: 'Arial', sans-serif;margin-left: 180px; font-weight: 10; font-size: 20px; color: #FFFFFF;">
+    WHATSAPP:
+	</h2>
+
+	<h2 class="hola" style="font-family: 'Arial', sans-serif;margin-left: 180px; font-weight: 10; font-size: 20px; color: #FFFFFF;">
+    Añade +51 913 503 592 a la lista de contactos en tu smartphone y comunícate con nosotros.  
+	</h2>
+	<h2 class="hola" style="font-family: 'Arial', sans-serif;margin-left: 180px; font-weight: 10; font-size: 20px; color: #FFFFFF;">
+    Si necesitas ayuda a través de WhatsApp, por favor comunícate con nosotros al número +51 913 503 592. 
+	</h2>
+	<h2 class="hola" style="font-family: 'Arial', sans-serif;margin-left: 180px; font-weight: 10; font-size: 20px; color: #FFFFFF;">
+    Recuerda que adidas nunca iniciará la comunicación ni te buscará por este canal, solamente responderemos a tus mensajes.
+	</h2>
+
+<div class="espacio-extra"></div>
+<img src="/img/fb.png" class="card-img-top" alt="..." style="margin-left: 40px;width: 120px;height: auto;">
+
+<h2 class="hola" style="font-family: 'Arial', sans-serif;margin-left: 180px; font-weight: 10; font-size: 20px; color: #FFFFFF;">
+    CONTACTANOS VIA FACEBOOK:
+	</h2>
+<h2 class="hola" style="font-family: 'Arial', sans-serif;margin-left: 180px; font-weight: 10; font-size: 20px; color: #FFFFFF;">
+   Utiliza la opción de Facebook Messenger. 
+	</h2>
+<div class="espacio-extra"></div>
+<img src="/img/FONO.png" class="card-img-top" alt="..." style="margin-left: 40px;width: 120px;height: auto;">
+
+<h2 class="hola" style="font-family: 'Arial', sans-serif;margin-left: 180px; font-weight: 10; font-size: 20px; color: #FFFFFF;">
+(1) 6432094	</h2>
+<div class="espacio-extra"></div>
+<h2 class="hola" style="font-family: 'Arial', sans-serif; margin-left: 180px; font-weight: bold; font-size: 35px; color: #FFFFFF;">
+   PREGUNTAS FRECUENTES
+</h2>
+<div class="container">
+    <div class="texto-izquierda" style="color:white;"><p style="font-weight: bold;">¿DONDE ESTÁ MI ORDEN?</p>Inicie sesión o ingrese los detalles de su pedido en el rastreador
+     de pedidos para ver el resumen de su pedido. Desde allí, puede cancelar artículos, 
+     realizar un seguimiento del estado de la entrega u organizar un cambio o 
+     una devolución. 1</div>
+    <div class="texto-derecha" style="color:white;"><p style="font-weight: bold;">¿AÚN NO ENCUENTRAS TU RESPUESTA?</p>PREGUNTALE A NUESTRO SERVICIO AL CLIENTE: Lun - Vie :
+     9:00 AM to 9:00 PM | Sab: 10:00 AM to 6:00 PM | Teléfono: 913 503 592</div>
+</div>
+
+
+
+<div class="espacio-vertical"></div>
+  <footer class="py-5 custom-footer" style="background-color: #151621; margin-bottom: -50px;">
+  <div class="container">
+    <div class="row">
+      <!-- Sección 1: Acerca de SNEAKER WEST -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Acerca de SNEAKER WEST</h5>
+        <p style="color: white;">El proyecto en colaboración con la empresa Sneaker West S.A. busca desarrollar una aplicación web para la venta de zapatillas de marcas reconocidas, abordando las dificultades del comercio electrónico actual.</p>
+        <p style="color: white;">Se utilizará Spring Boot para crear una plataforma segura y transparente, desde la exploración de catálogos hasta la gestión de transacciones.</p>
+        <p style="color: white;">Se implementará un sistema de análisis de ventas para obtener información sobre el comportamiento del cliente y mejorar la estrategia de ventas de "Sneaker West"</p>
+       	<p style="color: white;font-size: 14px;">PERÚ (PEN S/.)"</p>
+        <p style="color: white;font-size: 14px;">© SW-TIENDA"</p>
+        <p style="color: white;font-size: 14px;">Sueño Sneaker West</p>
+        
+        
+      </div>
+      <!-- Sección 2: Enlaces adicionales -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Más Información</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" style="color: white;">Políticas privadas</a></li>
+          <li><a href="#" style="color: white;">Términos de servicio</a></li>
+          <li><a href="#" style="color: white;">Envío</a></li>
+          <li><a href="#" style="color: white;">Guía de tallas</a></li>
+          <li><a href="#" style="color: white;">Contacto</a></li>
+        </ul>
+      </div>
+      <!-- Sección 3: Boletín informativo -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Boletín Informativo</h5>
+        <p style="color: white;">Suscríbete para recibir actualizaciones, acceder a ofertas exclusivas y más.</p>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Introduce tu dirección de correo electrónico">
+          </div>
+          <button type="submit" class="btn btn-primary">Suscribir</button>
+           <div class="text-right">
+  <img src="/img/tpagos.png" alt="Descripción de la imagen" style="width:200px; margin-bottom: 10px;">
+</div>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+
+ 
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" th:src="@{/js/sweetalert2.js}"></script>
+<script type="text/javascript">
+	$('.carousel').carousel({
+  interval: 2000
+})
+	</script>
+<script type="text/javascript" th:if="${success != null}">
+	
+		Swal.fire(
+			  'Registro completado!',
+			  'You clicked the button!',
+			  'success'
+			 )
+	</script>
+</body>
+</html>

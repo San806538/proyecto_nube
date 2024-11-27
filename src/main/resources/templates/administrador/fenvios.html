@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+
+<title>BONG SPEC S.A</title>
+<link rel="stylesheet" th:href="@{/css/inicio.css}"></link>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap"
+	rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
+</head>
+
+<body style="background-color: #0F1119;">
+
+	<!-- Navigation -->
+	<div th:include="administrador/template_admin::header"></div>
+
+	<!-- Page Content -->
+	<div class="container">
+
+
+		<!-- Page Heading/Breadcrumbs -->
+		<h1 style="color:white">Mis Envios</h1>
+<div class="espacio-vertical"></div>
+		
+		<table class="table" style="width: 110%;">
+			<thead>
+				<tr>
+					<th scope="col"style="color:white">Id</th>
+					<th scope="col"style="color:white">Proveedor</th>
+					<th scope="col"style="color:white">Nombre</th>
+					<th scope="col"style="color:white">Apellido</th>
+					<th scope="col"style="color:white">Direccion</th>
+					<th scope="col"style="color:white">Correo</th>
+					<th scope="col"style="color:white">Telefono</th>
+					<th scope="col"style="color:white">Postal</th>
+					<th scope="col"style="color:white">Departamento</th>
+					<th scope="col"style="color:white">Distrito</th>
+					<th scope="col"style="color:white">Orden</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="e:${envios}">
+					<td th:text="${e.id}"style="color:white"></td>
+					<td th:text="${e.proveedor}"style="color:white"></td>
+					<td th:text="${e.nombre}"style="color:white"></td>
+					<td th:text="${e.apellido}"style="color:white"></td>
+					<td th:text="${e.direccion}"style="color:white"></td>
+					<td th:text="${e.correo}"style="color:white"></td>
+					<td th:text="${e.telefono}"style="color:white"></td>
+					<td th:text="${e.postal}"style="color:white"></td>
+					<td th:text="${e.departamento}"style="color:white"></td>
+					<td th:text="${e.distrito}"style="color:white"></td>
+					<td th:text="${e.orden}"style="color:white"></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	<br>
+	<br>
+	<!-- /.container -->
+<script defer src="https://app.embed.im/snow.js"></script >
+	<!-- Footer --><script defer src="https://app.embed.im/snow.js"></script >
+	<footer class="py-5 custom-footer" style="background-color: #151621; margin-bottom: -50px;">
+  <div class="container">
+    <div class="row">
+      <!-- Sección 1: Acerca de SNEAKER WEST -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Acerca de SNEAKER WEST</h5>
+        <p style="color: white;">El proyecto en colaboración con la empresa Sneaker West S.A. busca desarrollar una aplicación web para la venta de zapatillas de marcas reconocidas, abordando las dificultades del comercio electrónico actual.</p>
+        <p style="color: white;">Se utilizará Spring Boot para crear una plataforma segura y transparente, desde la exploración de catálogos hasta la gestión de transacciones.</p>
+        <p style="color: white;">Se implementará un sistema de análisis de ventas para obtener información sobre el comportamiento del cliente y mejorar la estrategia de ventas de "Sneaker West"</p>
+       	<p style="color: white;font-size: 14px;">PERÚ (PEN S/.)"</p>
+        <p style="color: white;font-size: 14px;">© SW-TIENDA"</p>
+        <p style="color: white;font-size: 14px;">Sueño Sneaker West</p>
+        
+        
+      </div>
+      <!-- Sección 2: Enlaces adicionales -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Más Información</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" style="color: white;">Políticas privadas</a></li>
+          <li><a href="#" style="color: white;">Términos de servicio</a></li>
+          <li><a href="#" style="color: white;">Envío</a></li>
+          <li><a href="#" style="color: white;">Guía de tallas</a></li>
+          <li><a class="nav-link font-weight-bold" th:href="@{/contactos}">Contacto</a></li>
+          
+         
+        </ul>
+      </div>
+      <!-- Sección 3: Boletín informativo -->
+      <div class="col-md-4">
+        <h5 style="color: white;">Boletín Informativo</h5>
+        <p style="color: white;">Suscríbete para recibir actualizaciones, acceder a ofertas exclusivas y más.</p>
+        <form>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Introduce tu dirección de correo electrónico">
+          </div>
+          <button type="submit" class="btn btn-primary">Suscribir</button>
+           <div class="text-right">
+  <img src="/img/tpagos.png" alt="Descripción de la imagen" style="width:200px; margin-bottom: 10px;">
+</div>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+</footer>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<a
+		href="https://api.whatsapp.com/send?phone=51994300036&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20Pezano."
+		class="float" target="_blank"> <i class="fa fa-whatsapp my-float"></i>
+	</a>
+</body>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" th:src="@{/js/sweetalert2.js}"></script>
+<script type="text/javascript">
+	$('.carousel').carousel({
+		interval : 2000
+	})
+</script>
+<script type="text/javascript" th:if="${success != null}">
+	Swal.fire('Registro completado!', 'You clicked the button!', 'success')
+</script>
+</body>
+</html>

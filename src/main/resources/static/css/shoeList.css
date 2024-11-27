@@ -1,0 +1,80 @@
+body {
+    background-color: #0F1119; /* Color gris */
+}
+.espacio-vertical{
+	margin-bottom: 20px;
+	
+}
+.espacio-extra{
+	margin-bottom: 100px;
+	
+}
+.navbar-custom {
+    background-color: #1B1E24 !important;
+  }
+    .imager-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .full-width-img {
+    max-width: 53%; /* Cambia el valor según sea necesario */
+    display: block;
+    margin: auto; /* Esto centrará horizontalmente la imagen */
+  }
+  .title {
+    font-size: 38px; /* Tamaño de fuente aumentado */
+    font-weight: bold; /* Texto en negrita */
+    color: #FFFFFF; /* Color de texto naranja */
+  }
+  .shipping-message {
+  background-color: ; /* Color de fondo amarillo */
+  color: white; /* Color del texto blanco */
+  text-align: center; /* Alineación central del texto */
+  padding: 0px 5; /* Espaciado interior */
+  font-size: 13px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  margin-bottom: 5px; /* Margen inferior para separar del contenido siguiente */
+  letter-spacing: 2px; /* Espaciado entre letras */
+}
+.custom-footer {
+    background-color: #151621; /* Color de fondo #151621 */
+        margin-bottom: 20px; /* Margen inferior de 20px */
+    color: #FFFFFF;
+  }
+ body {
+        background-color: #0F1119;
+ }
+     .navbar-nav .nav-link {
+     font-family: 'Arial', sans-serif; /* Cambia 'Arial' por el tipo de letra que desees */
+    font-size: 15px; /* Tamaño de letra deseado */
+    letter-spacing: 0px;
+    }
+    
+   table {
+    border-color: #FFFFFF; /* Define el color de las líneas verticales */
+}
+
+
+
+.container {
+   
+   
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Agrega un relleno opcional */
+   
+}
+.container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos uniformemente en el contenedor */
+}
+
+.texto-izquierda,
+.texto-derecha {
+    font-size: 19px; /* Ajusta el tamaño de fuente según sea necesario */
+}
+
+
+
